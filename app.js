@@ -13,6 +13,9 @@ I need to create this structure
 // root = ReactDOM.createRoot(document.getElementById("root"))
 // root.render(heading)
 
+import React from "react";
+import ReactDOM from "react-dom/client"
+
 heading = React.createElement(
         "div",
         {id: "parent"},
@@ -22,5 +25,8 @@ heading = React.createElement(
                   [React.createElement("h1",{}, "Nested Tags in React"), React.createElement("h2",{}, "Nested Tags in React")]
                   )
                   )
+// if we wan't to write more html it will become messy, to make our life easy in creating tags we use JSX.
+// One thing to Note is even without JSX we can create webpages without JSX
+
 root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(heading)

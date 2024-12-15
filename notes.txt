@@ -1,0 +1,70 @@
+npm:
+  It is a strandard repository for all the packages. All the packages are hoisted in npm. if you want to install some package
+   you will get from npm.
+
+package.json:
+  Package.json is a configuration for npm. We will get package.json if we do npm init from terminal.
+
+One of the most important package in react is Bundler. 
+
+Bundler bundles/packages our app so that it can ship to production.
+
+Examples of Bundlers:
+    Parcel, webpack.
+
+There are 2 types of dependencies we can install
+    1) Dev dependancy (Used in development)
+    2) Normal dependancy (Used in Production)
+
+To install Parcel Bundler we need to write: npm install -D Parcel
+
+ We should do bundling, chuncking, code minification in development phase so we use
+    npm install -D Parcel
+
+Parcel is installed as dev dependancy, you can find in package.json
+  "devDependencies": {
+    "parcel": "^2.13.2"
+  }
+
+  ^ - carrot -- it will update minor version automatically
+  ~ - tilde  -- it will update major version automatically
+
+  Transitive Dependancy:
+
+  React depend on Parcel Package and parcel package depends on other packages,
+   because of this we got multiple libraries in node-modules.
+    Our project has package.json and other libraries in node_modules also have package.json
+
+package-lock.json is huge because it contains exact version of package installed as well as
+ dependancy packages versions which are there in node-modules.
+
+ if we have package.json and package-lock.json we can create node_modules again. So no need to push node_modules to github.
+   use this command: npm install
+
+npx = if you want to execute use npx
+npm = if you want to install package use npm
+
+Ex: npx parcel index.html
+
+# Parcel is doing following things:
+
+    Local Server
+    Dev Build
+    HMR = Hot Module Replacement(Automically Loads)
+    Automatic Loading is happening because Parcel uses File Watching Algorithem written in C++
+    Caching - Faster Builds
+    Image Optimization
+    minification(minifies the code)
+    Bundle the code
+    Compressing
+    Consistent Hashing
+    Code Splitting
+    Differential Bundling - support older browsers
+    Diagnostic
+    Error Handling
+    HTTPS
+    Tree Shaking - remove unused code
+
+To do production ready app we need to run -
+
+    npx parcel build index.html

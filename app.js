@@ -1,32 +1,39 @@
-/*
-I need to create this structure
-<div id="parent">
-        <div id="child">
-                <h1>Nested Tags in React</h1>
-        </div>
-</div>
-
-*/
-
-// heading = React.createElement("h1", {id: "heading", datatest: "table"}, "Hello world from React!")
-// console.log(heading)
-// root = ReactDOM.createRoot(document.getElementById("root"))
-// root.render(heading)
-
 import React from "react";
 import ReactDOM from "react-dom/client"
 
-heading = React.createElement(
-        "div",
-        {id: "parent"},
-        React.createElement(
-                "div",
-                 {id: "child"},
-                  [React.createElement("h1",{}, "Nested Tags in React"), React.createElement("h2",{}, "Nested Tags in React")]
-                  )
-                  )
-// if we wan't to write more html it will become messy, to make our life easy in creating tags we use JSX.
-// One thing to Note is even without JSX we can create webpages without JSX
+// heading = React.createElement("h1", {id: "heading"}, "React Tutorial")
+
+//JSX heading
+// JSX code is transfiled before it reaches JS Engine. Transfiling is done by Parcel. Parcel Uses Babel to transfile.
+// Babel Transfiles JSX Code  to React.createElement ==> ReactElement-JS Object => HTMLElement(render )
+// heading = (<h1>React Tutorial</h1>)
+// console.log(heading)
+
+const ele = <span>React Element</span>
+
+
+const HeadingComponent = () => (<div id="container">
+        <h1>Heading Component</h1>
+        {title}
+        <FooterComponent />
+        {FooterComponent()}
+        {10+2}
+        
+</div>)
+
+const FooterComponent = () => (<div id="footer">
+        <h1>Fotter Component</h1>
+        
+</div>)
+
+const title = (<div id="title">
+        {ele}
+        <h1>Title Component</h1>
+</div>)
+
+
+
 
 root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(heading)
+
+root.render(<HeadingComponent />)

@@ -1,0 +1,24 @@
+Everything in React is Component
+
+Button Component, Header, Footer, Input etc..,
+
+There are 2 types of components
+  - Functional components  --(New way of writing code)
+  - Class based components --(old projects uses class based components)
+
+React Functional Component:
+  - Just a normal Javascript function which returns JSX Code/React Element.
+  Example:
+    Heading Component(Mandatory name has to be title case)
+    const HeadingComponent = () => {
+        return (<h1>Functional Component</h1>)
+    }
+         OR
+
+    const HeadingComponent = () =>  (<h1>Functional Component</h1>)
+
+A Javascript function which returns JSX is known as Functional Component.
+
+Component Composition:
+
+Component inside a component is known as Component Composition.

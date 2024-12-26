@@ -68,3 +68,14 @@ Ex: npx parcel index.html
 To do production ready app we need to run -
 
     npx parcel build index.html
+
+
+// JSX
+
+We can build React Application without JSX also, but JSX makes our life simplier to create react element.
+
+JSX is not Html inside Javascript. It looks like html/xml
+
+JSX Heading:
+
+heading = <h1> Namaste React</h1>
